@@ -1,0 +1,9 @@
+{
+  "name": "studydesk",
+  "version": "0.1.0",
+  "description": "Turn syllabus and assignment screenshots into deadlines and a balanced study plan using Gemma vision.",
+  "license": "MIT",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": { "start": "node server.js", "test": "node planner.test.js" }
+}

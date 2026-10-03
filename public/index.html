@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerevia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <span class="brand"><i></i>Cerevia</span>
+  <span class="mono">Powered by Gemma 4</span>
+</nav>
+
+<header class="hero">
+  <p class="mono kicker">Syllabus → Deadlines → Plan</p>
+  <h1>Turn <em>screenshots</em><br>into a study plan<span class="dot">.</span></h1>
+  <p class="lede">Drop in every syllabus and assignment sheet. StudyDesk reads them, finds each deadline, and spreads the work so nothing lands on the night before.</p>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Syllabi ✺ Exams ✺ Assignments ✺ Quizzes ✺ Projects ✺ Readings ✺ Labs ✺ </span>
+    <span>Syllabi ✺ Exams ✺ Assignments ✺ Quizzes ✺ Projects ✺ Readings ✺ Labs ✺ </span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section>
+    <h2><span class="n">01</span> Upload</h2>
+    <label id="drop" tabindex="0">
+      <input id="file" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple hidden>
+      <span class="plus" aria-hidden="true">+</span>
+      <span class="big-label">Drop screenshots here</span>
+      <span class="muted">or click to browse · paste with Ctrl+V · add as many as you like</span>
+    </label>
+    <ul id="queue"></ul>
+    <p class="demo-line">No screenshot handy? <button id="demo" class="ghost">Try sample data</button></p>
+  </section>
+
+  <section id="app" hidden>
+    <div id="stats"></div>
+
+    <div class="grid">
+      <div class="card" id="today"></div>
+      <div class="card">
+        <h3 class="card-title">Your capacity</h3>
+        <div class="row"><label for="hpd">Study hours per day</label><input id="hpd" type="number" min="0.5" max="14" step="0.5"></div>
+        <div class="row"><label for="sess">Longest session (h)</label><input id="sess" type="number" min="0.5" max="6" step="0.5"></div>
+        <div class="row"><label for="wk">Skip weekends</label><input id="wk" type="checkbox"></div>
+      </div>
+    </div>
+
+    <div class="bar">
+      <h2><span class="n">02</span> Deadlines</h2>
+      <div class="actions">
+        <button id="add" class="ghost">+ Add</button>
+        <button id="ics" class="ghost">Export .ics</button>
+        <button id="clear" class="ghost danger">Clear all</button>
+      </div>
+    </div>
+    <div id="alerts"></div>
+    <div id="deadlines"></div>
+
+    <h2><span class="n">03</span> Workload</h2>
+    <div class="card" id="weeks"></div>
+
+    <h2><span class="n">04</span> Your plan</h2>
+    <div id="plan"></div>
+  </section>
+
+</main>
+
+<script src="planner.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
