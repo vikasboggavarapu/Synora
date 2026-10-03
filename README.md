@@ -12,7 +12,7 @@ Gemma 4 reads the screenshots. Plain code builds the schedule, so the plan is in
 - **Honest warnings.** Overdue items, undated items, and deadlines that can't fit in your capacity are called out.
 - **Workload by week.** A bar per week shows when you're overloaded.
 - **Calendar export.** Download an `.ics` file with deadlines and study sessions for Google Calendar, Apple Calendar or Outlook.
-- **Private by default.** Your list and progress are stored in your browser (`localStorage`). Only the screenshots go to the Gemini API, through your own key.
+
 
 ## Run
 
