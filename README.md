@@ -1,4 +1,4 @@
-# StudyDesk
+# Synora
 
 Screenshots of your syllabi and assignment sheets in. One deadline list and a balanced study plan out.
 
